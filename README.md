@@ -4,6 +4,8 @@ The team git assignment for COSC 499
 ### Team Members
 * Jasper Looman (Tech Lead) 42305169
 * Daniel Elizondo (Project Manager) 16719189
+* Shamus Boulianne (QA Lead) 78559770
+* Maya Tomoum (Client Liason) 30864748
 
 ## Requirements
 Python installed on your local machine.
