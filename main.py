@@ -43,15 +43,14 @@ test_is_larger()
 # Run the test for string_sort()
 test_string_sort()
 
-
 # int_sort_desc(arr) -> int; sorts an int array in descending order 
 def int_sort_desc(arr):
     """int_sort_desc(arr) -> int; This function takes an array of integers as an argument and sorts them in descending order."""
     arr.sort(reverse = True)
 
-# test_sort_desc() -> void; Uses sample array and to check int_sort_desc(arr) -> int reverses the array 
+# test_sort_desc() -> void; Uses sample array and to check int_sort_desc(arr) -> int sorts the array in descending order 
 def test_sort_desc():
-    """test_sort_desc() -> void; Uses sample array and calls int_sort_desc(arr) -> int to reverse said array"""
+    """test_sort_desc() -> void; Uses sample array and calls int_sort_desc(arr) -> int sorts the array in descending order"""
     arro = [5,7,9,2,4]
     int_sort_desc(arro)
     print(arro)
