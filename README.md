@@ -3,6 +3,7 @@ The team git assignment for COSC 499
 
 ### Team Members
 * Jasper Looman (Tech Lead) 42305169
+* Daniel Elizondo (Project Manager) 16719189
 
 ## Requirements
 Python installed on your local machine.
