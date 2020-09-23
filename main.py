@@ -37,6 +37,26 @@ def test_string_sort():
     test_passed = True if (arr == ['dan', 'maya', 'shamus', 'jasper36']) else False
     print('string_sort test passed' if test_passed else 'string_sort test did not pass')
 
+# int_sort(arr) -> void; sorts a int list in ascending order using a bubble sort
+def int_sort(arr):
+    """int_sort(arr: int[]) -> int[]; This function uses a bubble sort to sort numbers in an ascending order."""
+    for i in range(len(arr) - 1, 0, -1):
+        for k in range(i):
+            if arr[k] > arr[k + 1]:
+                temp = arr[k]
+                arr[k] = arr[k + 1]
+                arr[k + 1] = temp
+    return arr
+
+# test_int_sort()-> bool; tests int_sort() with one (1) test and returns true iff all tests pass. Prints results along the way
+def test_int_sort():
+    """test_int_sort() -> bool; THis function tests the int_sort() function, and returns true iff all tests pass"""
+    print('Testing int_sort()')
+    arr = int_sort([3,6,2,7,9,12,53,25,1,6])
+    test_passed = True if (arr == [1,2,3,6,6,7,9,12,25,53]) else False
+    print('Did all tests pass? ' + ('Yes!' if test_passed else 'No!'))
+    return test_passed
+
 # Run the test for is_larger()
 test_is_larger()
 
@@ -57,3 +77,6 @@ def test_sort_desc():
 
 # Run test for int_sort_desc(arr)
 test_sort_desc()
+
+# Run the test for int_sort()
+test_int_sort()
