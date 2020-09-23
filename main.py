@@ -10,6 +10,16 @@ def is_larger( n1, n2 ):
 	else:
 		return 0
 
+# stringSort(arr) -> void; sorts a string list in ascending order of length
+def string_sort(arr):
+    """stringSort(arr) -> void; This function sorts a string list in ascending order of length."""
+    for i in range(len(arr)-1):
+        for j in range(i, len(arr)):
+            if is_larger(len(arr[i]), len(arr[j])) > 0:
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+
 # test_is_larger() -> bool; tests is_larger() with several tests, and returns true iff all tests pass. Prints results along the way.
 def test_is_larger():
 	"""test_is_larger() -> bool; This function tests the is_larger() function, and returns true if all tests pass, false otherwise. Prints results too."""
@@ -18,5 +28,17 @@ def test_is_larger():
 	print('Did all tests pass? ' + ('Yes!' if tests_passed else 'No!'))
 	return tests_passed
 
+# test_string_sort() -> bool; tests string_sort() with a single test. Returns true if the test passes.
+def test_string_sort():
+    """test_string_sort() -> bool; This function tests the string_sort() function, and returns true if the test passes."""
+    print('Testing string_sort()')
+    arr = ['shamus', 'dan', 'jasper36', 'maya']
+    string_sort(arr)
+    test_passed = True if (arr == ['dan', 'maya', 'shamus', 'jasper36']) else False
+    print('string_sort test passed' if test_passed else 'string_sort test did not pass')
+
 # Run the test for is_larger()
 test_is_larger()
+
+# Run the test for string_sort()
+test_string_sort()

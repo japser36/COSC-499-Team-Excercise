@@ -9,3 +9,5 @@ To execute the program, in a command prompt run `python main.py` from this repos
 
 ## Features
 * `is_larger` function. This is a simple function that accepts two numbers, and compares them. It returns `-1` if the first number is smaller, `1` if the first number is bigger, `0` otherwise (if they are equal). Could be used as a comparator in a sorting function.
+
+* `string_sort` function. This is a function that sorts a list on the length of its elements.
